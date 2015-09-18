@@ -7,3 +7,5 @@
 /pkg/
 /spec/reports/
 /tmp/
+spec/files/VERSION
+spec/files/bumpversion.cfg

@@ -3,9 +3,9 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in bumpversion.gemspec
 gemspec
 
-gem 'trollop', '2.1.2'
-gem 'parseconfig', '1.0.4'
-gem 'colorize'
+gem 'trollop', '~>2.1'
+gem 'parseconfig', '~>1.0'
+gem 'colorize', '~>0.7'
 
 group :test do
   gem 'rubocop', '~>0.31'

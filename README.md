@@ -1,5 +1,9 @@
+[![Gem Version](https://badge.fury.io/rb/bumpversion.svg)](http://badge.fury.io/rb/bumpversion)
+[![Dependency Status](https://gemnasium.com/dlanileonardo/bumpversion.svg)](https://gemnasium.com/dlanileonardo/bumpversion)
+[![Inline docs](http://inch-ci.org/github/dlanileonardo/bumpversion.svg)](http://inch-ci.org/github/dlanileonardo/bumpversion)
 [![Code Climate](https://codeclimate.com/github/dlanileonardo/bumpversion/badges/gpa.svg)](https://codeclimate.com/github/dlanileonardo/bumpversion)
 [![Test Coverage](https://codeclimate.com/github/dlanileonardo/bumpversion/badges/coverage.svg)](https://codeclimate.com/github/dlanileonardo/bumpversion/coverage)
+[![Build Status](https://travis-ci.org/dlanileonardo/bumpversion.svg?branch=master)](https://travis-ci.org/dlanileonardo/bumpversion)
 
 # Bumpversion
 

@@ -2,6 +2,8 @@ require_relative 'bumpversion/version'
 require_relative 'bumpversion/parser'
 require_relative 'bumpversion/parser_file'
 require_relative 'bumpversion/bump_string'
+require_relative 'bumpversion/reader'
+require_relative 'bumpversion/writer'
 require 'colorize'
 
 module Bumpversion
@@ -16,10 +18,11 @@ module Bumpversion
     end
 
     def run
-      # p "Reading files ..."
-      # reader = Reader.new @options
-      # writer = Writer.new @options, reader
-      # p "Bumped as Sucessfull!".green if writer
+      p "Reading files ..."
+      reader = Reader.new @options
+      writer = Writer.new @options, reader
+      writer.write!
+      p "Bumped as Sucessfull!" if writer
     end
   end
 end
