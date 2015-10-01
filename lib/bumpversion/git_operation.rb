@@ -16,6 +16,7 @@ module Bumpversion
     def commit!
       if @options[:git_commit]
         file = @options[:file].split(',') + [@options[:config_file]]
+        file += @options[:git_extra_add].split(',') if @options[:git_extra_add]
         @git.add(file)
         @git.commit("Bump version: #{@options[:current_version]} → #{@options[:new_version]}")
       end
