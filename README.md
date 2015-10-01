@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/dlanileonardo/bumpversion.png?label=ready&title=Ready)](https://waffle.io/dlanileonardo/bumpversion)
 [![Gem Version](https://badge.fury.io/rb/bumpversion.svg)](http://badge.fury.io/rb/bumpversion)
 [![Dependency Status](https://gemnasium.com/dlanileonardo/bumpversion.svg)](https://gemnasium.com/dlanileonardo/bumpversion)
 [![Inline docs](http://inch-ci.org/github/dlanileonardo/bumpversion.svg)](http://inch-ci.org/github/dlanileonardo/bumpversion)
