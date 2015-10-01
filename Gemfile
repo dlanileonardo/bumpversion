@@ -6,7 +6,7 @@ gemspec
 gem 'trollop', '~>2.1'
 gem 'parseconfig', '~>1.0'
 gem 'colorize', '~>0.7'
-gem 'git', '~>1.2.9.1'
+gem 'git', '~>1.2.9'
 
 group :test do
   gem 'rubocop', '~>0.31'
