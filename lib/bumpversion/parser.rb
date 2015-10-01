@@ -24,6 +24,13 @@ module Bumpversion
         opt :current_version, 'The current version of the software package before bumping ', type: :string
         opt :new_version, 'The version of the software package after the increment. \
         If not given will be automatically determined.', required: false, type: :string
+
+        opt :git_commit, 'Whether to create a commit using Git.', required: false, default: false, type: :boolean
+        opt :git_tag, 'Whether to create a tag, that is the new version, prefixed with the character "v". If you are using git',
+          required: false, default: false, type: :boolean
+        opt :git_push, 'Pushes Tags and Commit to origin Git', reuired: false, default: false, type: :boolean
+        opt :git_user, 'Name from User to Create Commit', required: false, default: "Auto Bump", type: :string
+        opt :git_email, 'Email from User to Create Email', required: false, default: "auto@bump.io", type: :string
       end
     end
 
