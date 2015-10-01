@@ -5,6 +5,7 @@ require_relative 'bumpversion/bump_string'
 require_relative 'bumpversion/reader'
 require_relative 'bumpversion/writer'
 require_relative 'bumpversion/git_operation'
+require_relative 'bumpversion/hook'
 require 'colorize'
 
 module Bumpversion
@@ -25,7 +26,9 @@ module Bumpversion
       writer = Writer.new @options, reader
       writer.write!
       p "Bumped as Sucessfull!" if writer
+      p Hook.pre_commit_hook @options
       @git.do!
+      p Hook.pos_commit_hook @options
     end
   end
 end

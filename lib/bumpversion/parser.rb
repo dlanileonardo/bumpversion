@@ -31,6 +31,11 @@ module Bumpversion
         opt :git_push, 'Pushes Tags and Commit to origin Git', reuired: false, default: false, type: :boolean
         opt :git_user, 'Name from User to Create Commit', required: false, default: "Auto Bump", type: :string
         opt :git_email, 'Email from User to Create Email', required: false, default: "auto@bump.io", type: :string
+
+        opt :pre_commit_hooks, 'Call sh commands before commits after Bumpversion separated by ;',
+          required: false, type: :string
+        opt :pos_commit_hooks, 'Call sh commands after commits separated by ;',
+          required: false, type: :string
       end
     end
 
