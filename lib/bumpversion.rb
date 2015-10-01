@@ -4,6 +4,7 @@ require_relative 'bumpversion/parser_file'
 require_relative 'bumpversion/bump_string'
 require_relative 'bumpversion/reader'
 require_relative 'bumpversion/writer'
+require_relative 'bumpversion/git_operation'
 require 'colorize'
 
 module Bumpversion
@@ -15,6 +16,7 @@ module Bumpversion
       @options = parser_file.parse
       bump_string = BumpString.new @options
       @options = bump_string.bump
+      @git = GitOperation.new @options
     end
 
     def run
@@ -23,6 +25,7 @@ module Bumpversion
       writer = Writer.new @options, reader
       writer.write!
       p "Bumped as Sucessfull!" if writer
+      @git.do!
     end
   end
 end
