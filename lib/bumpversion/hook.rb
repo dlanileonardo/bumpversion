@@ -2,7 +2,8 @@
 module Bumpversion
   class Hook
     def self.call_system(key_hook,options)
-      command = options[ key_hook] % options
+      return false unless options[key_hook]
+      command = options[key_hook] % options
       p "Executing command: #{command}"
       system("#{command}") if command
     end
