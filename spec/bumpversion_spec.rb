@@ -71,6 +71,10 @@ describe Bumpversion::Bumpversion do
       File.write('./spec/files/bumpversion.cfg', "[bumpversion]\ncurrent-version=2.1.1\n")
       File.write('./spec/files/VERSION', "version=2.1.1\n")
     end
+    after(:all) do
+      File.write('./spec/files/bumpversion.cfg', '')
+      File.write('./spec/files/VERSION', '')
+    end
     context 'patch' do
       let(:arguments) { ['--config-file=./spec/files/bumpversion.cfg', '--file=./spec/files/VERSION', '--part=patch'] }
       let(:bump_instance) { Bumpversion::Bumpversion.new arguments }
