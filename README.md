@@ -1,49 +1,69 @@
-[![Stories in Ready](https://badge.waffle.io/dlanileonardo/bumpversion.png?label=ready&title=Ready)](https://waffle.io/dlanileonardo/bumpversion)
-[![Gem Version](https://badge.fury.io/rb/bumpversion.svg)](http://badge.fury.io/rb/bumpversion)
-[![Dependency Status](https://gemnasium.com/dlanileonardo/bumpversion.svg)](https://gemnasium.com/dlanileonardo/bumpversion)
-[![Inline docs](http://inch-ci.org/github/dlanileonardo/bumpversion.svg)](http://inch-ci.org/github/dlanileonardo/bumpversion)
-[![Code Climate](https://codeclimate.com/github/dlanileonardo/bumpversion/badges/gpa.svg)](https://codeclimate.com/github/dlanileonardo/bumpversion)
-[![Test Coverage](https://codeclimate.com/github/dlanileonardo/bumpversion/badges/coverage.svg)](https://codeclimate.com/github/dlanileonardo/bumpversion/coverage)
-[![Build Status](https://travis-ci.org/dlanileonardo/bumpversion.svg?branch=master)](https://travis-ci.org/dlanileonardo/bumpversion)
-
 # Bumpversion
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/bumpversion`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 TODO: Delete this and the text above, and describe your gem
 
+# Code Status
+
+
+
+Service | Status
+--------|----------
+Issues Ready to Work|[![Waffle.io](https://img.shields.io/waffle/label/dlanileonardo/bumpversion/in%20progress.svg?maxAge=2592000&style=flat-square)](https://waffle.io/dlanileonardo/bumpversion)
+Gems Version|[![Gem](https://img.shields.io/gem/v/bumpversion.svg?maxAge=2592000&style=flat-square)](http://badge.fury.io/rb/bumpversion)
+Code Climate|[![Code Climate](https://img.shields.io/codeclimate/github/kabisaict/flow.svg?maxAge=2592000&style=flat-square)](https://codeclimate.com/github/dlanileonardo/bumpversion)
+Coverage|[![Code Climate](https://img.shields.io/codeclimate/coverage/github/dlanileonardo/bumpversion.svg?maxAge=2592000&style=flat-square)](https://codeclimate.com/github/dlanileonardo/bumpversion/coverage)
+Build Status|[![Travis](https://img.shields.io/travis/dlanileonardo/bumpversion.svg?maxAge=2592000&style=flat-square)](https://travis-ci.org/dlanileonardo/bumpversion)
+
 ## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'bumpversion'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
 
     $ gem install bumpversion
 
 ## Usage
 
-TODO: Write usage instructions here
+1. Create .bumpversion.cfg file in project root folder.
 
-## Development
+  Example:
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake rspec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+  ```
+  [bumpversion]
+  current-version=33.0.2
+  pre-commit-hooks=github_changelog_generator --future-release %{new_version}
+  git-extra-add=CHANGELOG.md
+  git-commit=yes
+  git-tag=yes
+  git-push=yes
+  ```
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+2. Run command with argument [major, minor, patch]:
 
-## Contributing
+  ```
+  $ bumpversion patch
+  ```
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/bumpversion. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+3. Enjoy
 
+## Options
+
+Options can be passed in arguments with -- or in .cfg file wihout --.
+
+Option|Description
+--------|----------
+part|The part of the version to increase, [major, minor, patch] (default: minor)
+file|The file that will be modified can be multi-files separated by comma. <br /> Example: VERSION, GEMNAME.gemspec, version.rb (Default: VERSION)
+config-file|The file contains config this program (default: .bumpversion.cfg)
+current-version|The current version of the software package before bumping
+new-version| The version of the software package after the increment. <br /> If not given will be automatically determined.
+git-commit|Whether to create a commit using Git.
+git-tag|Whether to create a tag, that is the new version, prefixed with the character "v". If you are using git
+git-push|Pushes Tags and Commit to origin Git
+git-user|Name from User to Create Commit (default: Auto Bump)
+git-email|Email from User to Create Email (default: auto@bump.io)
+git-extra-add|Extra files to add in git commit (default: )
+pre-commit-hooks|Call sh commands before commits after Bumpversion separated by ;
+pos-commit-hooks|Call sh commands after commits separated by ;
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
