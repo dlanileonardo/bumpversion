@@ -4,8 +4,8 @@ module Bumpversion
     def self.call_system(key_hook,options)
       return false unless options[key_hook]
       command = options[key_hook] % options
-      p "Executing command: #{command}"
-      system("#{command}") if command
+      PrettyOutput.info "Executing command: #{command}"
+      system("#{command} 1> /dev/null") if command
     end
 
     def self.pos_commit_hook(options)
