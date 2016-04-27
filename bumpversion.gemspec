@@ -25,9 +25,9 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency("trollop", ["~> 2.1"])
   spec.add_runtime_dependency("parseconfig", ["~> 1.0"])
   spec.add_runtime_dependency("colorize", ["~> 0.7"])
-  spec.add_runtime_dependency("git", ["~> 1.2.9"])
+  spec.add_runtime_dependency("git", ['~> 1.2', '>= 1.2.9'])
 
-  spec.add_development_dependency 'bundler', '~> 1.10'
-  spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency 'rspec'
+  spec.add_development_dependency('bundler', ['~> 1.10'])
+  spec.add_development_dependency('rake', ['~> 10.0'])
+  spec.add_development_dependency('rspec', ['~> 0'])
 end
