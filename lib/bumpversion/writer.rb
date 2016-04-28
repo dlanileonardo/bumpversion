@@ -20,7 +20,7 @@ module Bumpversion
       file_current_version_match = file_has_current_version && content_config_file.include?(@options[:current_version])
       valid = !file_exists || !file_has_current_version || file_current_version_match
 
-      fail "Version File does not Match with Current Version" unless valid
+      raise "Version File does not Match with Current Version" unless valid
     end
 
     def update_config_file!

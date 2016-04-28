@@ -6,4 +6,4 @@ require 'rspec/core/rake_task'
 RuboCop::RakeTask.new
 RSpec::Core::RakeTask.new
 
-task :default => ["spec", "rubocop"]
+task :default => %w(spec)

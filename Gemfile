@@ -13,6 +13,7 @@ group :test do
   gem 'bundler'
   gem 'rspec', '~> 3.0.0'
   gem 'rspec-core', '~> 3.0.0'
+  gem 'rspec-expectations', '~> 3.0.0'
   gem 'rubocop', '~>0.31', require: false
   gem 'coveralls', '~>0.8', require: false
   gem 'simplecov', '~>0.10', require: false

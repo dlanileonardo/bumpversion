@@ -9,7 +9,7 @@ module Bumpversion
 
     def validate!
       files_to_write.each do |file_to_write|
-        fail "Current Version not found in #{file_to_write[:filename]} file" unless file_to_write[:content].include? @options[:current_version]
+        raise "Current Version not found in #{file_to_write[:filename]} file" unless file_to_write[:content].include? @options[:current_version]
       end
     end
 
