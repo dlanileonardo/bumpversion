@@ -1,6 +1,6 @@
 # Change Log
 
-## [0.3.0](https://github.com/dlanileonardo/bumpversion/tree/0.3.0) (2016-04-27)
+## [v0.3.0](https://github.com/dlanileonardo/bumpversion/tree/v0.3.0) (2016-04-28)
 **Implemented enhancements:**
 
 - Push tag to Remote [\#15](https://github.com/dlanileonardo/bumpversion/issues/15)
