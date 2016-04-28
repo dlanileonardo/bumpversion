@@ -1,7 +1,7 @@
 # Change Log
 
-## [v0.2.0](https://github.com/dlanileonardo/bumpversion/tree/v0.2.0) (2016-04-27)
-[Full Changelog](https://github.com/dlanileonardo/bumpversion/compare/v0.1.0...v0.2.0)
+## [0.2.0](https://github.com/dlanileonardo/bumpversion/tree/0.2.0) (2016-04-27)
+[Full Changelog](https://github.com/dlanileonardo/bumpversion/compare/v0.1.0...0.2.0)
 
 **Merged pull requests:**
 
