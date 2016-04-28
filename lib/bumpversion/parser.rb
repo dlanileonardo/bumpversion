@@ -1,4 +1,5 @@
 require 'trollop'
+require 'bumpversion/version'
 
 module Bumpversion
   class Parser
@@ -8,14 +9,19 @@ module Bumpversion
     end
 
     def mount_banner
+      version_number = VERSION
       Trollop::Parser.new do
-        banner <<-EOS
-  Bumpversion 0.1.0
+        version "Bumpversion #{version_number} ☺"
+        usage "bumpversion [options] --part [major|minor|patch]
+        where [options] are:"
 
-  Usage:
-    bumpversion [options]
-    where [options] are:
+        banner <<-EOS
+#{version}
+
+Usage:
+#{usage}
         EOS
+
         opt :help, 'Show this help!'
         opt :part, 'The part of the version to increase, [major, minor, patch]', default: 'minor'
         opt :file, 'The file that will be modified can be multi-files separated by comma.
