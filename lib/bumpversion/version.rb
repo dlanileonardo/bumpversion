@@ -1,3 +1,3 @@
 module Bumpversion
-  VERSION = '0.3.1'.freeze
+  VERSION = '0.3.2'.freeze
 end
