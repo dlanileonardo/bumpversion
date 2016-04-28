@@ -28,33 +28,45 @@
 
     <div class="container">
       <section id="main_content">
-        <p><a href="http://badge.fury.io/rb/bumpversion"><img src="https://badge.fury.io/rb/bumpversion.svg" alt="Gem Version"></a>
-<a href="https://gemnasium.com/dlanileonardo/bumpversion"><img src="https://gemnasium.com/dlanileonardo/bumpversion.svg" alt="Dependency Status"></a>
-<a href="http://inch-ci.org/github/dlanileonardo/bumpversion"><img src="http://inch-ci.org/github/dlanileonardo/bumpversion.svg" alt="Inline docs"></a>
-<a href="https://codeclimate.com/github/dlanileonardo/bumpversion"><img src="https://codeclimate.com/github/dlanileonardo/bumpversion/badges/gpa.svg" alt="Code Climate"></a>
-<a href="https://codeclimate.com/github/dlanileonardo/bumpversion/coverage"><img src="https://codeclimate.com/github/dlanileonardo/bumpversion/badges/coverage.svg" alt="Test Coverage"></a>
-<a href="https://travis-ci.org/dlanileonardo/bumpversion"><img src="https://travis-ci.org/dlanileonardo/bumpversion.svg?branch=master" alt="Build Status"></a></p>
-
-<h1>
+        <h1>
 <a id="bumpversion" class="anchor" href="#bumpversion" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bumpversion</h1>
 
-<p>Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file <code>lib/bumpversion</code>. To experiment with that code, run <code>bin/console</code> for an interactive prompt.</p>
+<h1>
+<a id="code-status" class="anchor" href="#code-status" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Code Status</h1>
 
-<p>TODO: Delete this and the text above, and describe your gem</p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Issues Ready to Work</td>
+<td><a href="https://waffle.io/dlanileonardo/bumpversion"><img src="https://img.shields.io/waffle/label/dlanileonardo/bumpversion/in%20progress.svg?maxAge=2592000&amp;style=flat-square" alt="Waffle.io"></a></td>
+</tr>
+<tr>
+<td>Gems Version</td>
+<td><a href="http://badge.fury.io/rb/bumpversion"><img src="https://img.shields.io/gem/v/bumpversion.svg?maxAge=2592000&amp;style=flat-square" alt="Gem"></a></td>
+</tr>
+<tr>
+<td>Code Climate</td>
+<td><a href="https://codeclimate.com/github/dlanileonardo/bumpversion"><img src="https://img.shields.io/codeclimate/github/kabisaict/flow.svg?maxAge=2592000&amp;style=flat-square" alt="Code Climate"></a></td>
+</tr>
+<tr>
+<td>Coverage</td>
+<td><a href="https://codeclimate.com/github/dlanileonardo/bumpversion/coverage"><img src="https://img.shields.io/codeclimate/coverage/github/dlanileonardo/bumpversion.svg?maxAge=2592000&amp;style=flat-square" alt="Code Climate"></a></td>
+</tr>
+<tr>
+<td>Build Status</td>
+<td><a href="https://travis-ci.org/dlanileonardo/bumpversion"><img src="https://img.shields.io/travis/dlanileonardo/bumpversion.svg?maxAge=2592000&amp;style=flat-square" alt="Travis"></a></td>
+</tr>
+</tbody>
+</table>
 
 <h2>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
-
-<p>Add this line to your application's Gemfile:</p>
-
-<div class="highlight highlight-source-ruby"><pre><span class="pl-k">gem</span> <span class="pl-s"><span class="pl-pds">'</span>bumpversion<span class="pl-pds">'</span></span></pre></div>
-
-<p>And then execute:</p>
-
-<pre><code>$ bundle
-</code></pre>
-
-<p>Or install it yourself as:</p>
 
 <pre><code>$ gem install bumpversion
 </code></pre>
@@ -62,19 +74,97 @@
 <h2>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
 
-<p>TODO: Write usage instructions here</p>
+<ol>
+<li>
+<p>Create .bumpversion.cfg file in project root folder.</p>
+
+<p>Example:</p>
+
+<pre><code>[bumpversion]
+current-version=33.0.2
+pre-commit-hooks=github_changelog_generator --future-release %{new_version}
+git-extra-add=CHANGELOG.md
+git-commit=yes
+git-tag=yes
+git-push=yes
+</code></pre>
+</li>
+<li>
+<p>Run command with argument [major, minor, patch]:</p>
+
+<pre><code>$ bumpversion --part patch
+</code></pre>
+</li>
+<li><p>Enjoy</p></li>
+</ol>
 
 <h2>
-<a id="development" class="anchor" href="#development" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Development</h2>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options</h2>
 
-<p>After checking out the repo, run <code>bin/setup</code> to install dependencies. Then, run <code>rake rspec</code> to run the tests. You can also run <code>bin/console</code> for an interactive prompt that will allow you to experiment.</p>
+<p>Options can be passed in arguments with -- or in .cfg file wihout --.</p>
 
-<p>To install this gem onto your local machine, run <code>bundle exec rake install</code>. To release a new version, update the version number in <code>version.rb</code>, and then run <code>bundle exec rake release</code>, which will create a git tag for the version, push git commits and tags, and push the <code>.gem</code> file to <a href="https://rubygems.org">rubygems.org</a>.</p>
-
-<h2>
-<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
-
-<p>Bug reports and pull requests are welcome on GitHub at <a href="https://github.com/%5BUSERNAME%5D/bumpversion">https://github.com/[USERNAME]/bumpversion</a>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the <a href="contributor-covenant.org">Contributor Covenant</a> code of conduct.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>part</td>
+<td>The part of the version to increase, major, minor, patch</td>
+</tr>
+<tr>
+<td>file</td>
+<td>The file that will be modified can be multi-files separated by comma. <br> Example: VERSION, GEMNAME.gemspec, version.rb (Default: VERSION)</td>
+</tr>
+<tr>
+<td>config-file</td>
+<td>The file contains config this program (default: .bumpversion.cfg)</td>
+</tr>
+<tr>
+<td>current-version</td>
+<td>The current version of the software package before bumping</td>
+</tr>
+<tr>
+<td>new-version</td>
+<td>The version of the software package after the increment. <br> If not given will be automatically determined.</td>
+</tr>
+<tr>
+<td>git-commit</td>
+<td>Whether to create a commit using Git.</td>
+</tr>
+<tr>
+<td>git-tag</td>
+<td>Whether to create a tag, that is the new version, prefixed with the character "v". If you are using git</td>
+</tr>
+<tr>
+<td>git-push</td>
+<td>Pushes Tags and Commit to origin Git</td>
+</tr>
+<tr>
+<td>git-user</td>
+<td>Name from User to Create Commit (default: Auto Bump)</td>
+</tr>
+<tr>
+<td>git-email</td>
+<td>Email from User to Create Email (default: <a href="mailto:auto@bump.io">auto@bump.io</a>)</td>
+</tr>
+<tr>
+<td>git-extra-add</td>
+<td>Extra files to add in git commit (default: )</td>
+</tr>
+<tr>
+<td>pre-commit-hooks</td>
+<td>Call sh commands before commits after Bumpversion separated by ;</td>
+</tr>
+<tr>
+<td>pos-commit-hooks</td>
+<td>Call sh commands after commits separated by ;</td>
+</tr>
+</tbody>
+</table>
 
 <h2>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
