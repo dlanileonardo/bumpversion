@@ -39,7 +39,7 @@ Build Status|[![Travis](https://img.shields.io/travis/dlanileonardo/bumpversion.
 2. Run command with argument [major, minor, patch]:
 
   ```
-  $ bumpversion patch
+  $ bumpversion --part patch
   ```
 
 3. Enjoy
