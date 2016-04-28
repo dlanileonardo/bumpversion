@@ -28,7 +28,7 @@ module Bumpversion
 
     def push!
       @git.push if @options[:git_push]
-      @git.push(@git.remote.name, @git.branch.name, {:tags => true}) if @options[:git_push] && @options[:git_tag]
+      @git.push(@git.remote.name, @git.branch.name, :tags => true) if @options[:git_push] && @options[:git_tag]
     end
 
     def do!
