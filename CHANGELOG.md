@@ -1,13 +1,6 @@
 # Change Log
 
-## [0.2.0](https://github.com/dlanileonardo/bumpversion/tree/0.2.0) (2016-04-27)
-[Full Changelog](https://github.com/dlanileonardo/bumpversion/compare/v0.1.0...0.2.0)
-
-**Merged pull requests:**
-
-- Bumpversion [\#20](https://github.com/dlanileonardo/bumpversion/pull/20) ([dlanileonardo](https://github.com/dlanileonardo))
-
-## [v0.1.0](https://github.com/dlanileonardo/bumpversion/tree/v0.1.0) (2016-04-27)
+## [0.3.0](https://github.com/dlanileonardo/bumpversion/tree/0.3.0) (2016-04-27)
 **Implemented enhancements:**
 
 - Push tag to Remote [\#15](https://github.com/dlanileonardo/bumpversion/issues/15)
@@ -23,6 +16,7 @@
 
 **Merged pull requests:**
 
+- Bumpversion [\#20](https://github.com/dlanileonardo/bumpversion/pull/20) ([dlanileonardo](https://github.com/dlanileonardo))
 - Remove unecessary files [\#17](https://github.com/dlanileonardo/bumpversion/pull/17) ([dlanileonardo](https://github.com/dlanileonardo))
 - Adjusts to Work [\#16](https://github.com/dlanileonardo/bumpversion/pull/16) ([dlanileonardo](https://github.com/dlanileonardo))
 - Adjusts to Work [\#14](https://github.com/dlanileonardo/bumpversion/pull/14) ([dlanileonardo](https://github.com/dlanileonardo))
