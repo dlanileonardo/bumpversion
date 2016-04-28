@@ -11,6 +11,16 @@ describe Bumpversion::Bumpversion do
     end
   end
 
+  context 'mount banner' do
+    let(:parser){ Bumpversion::Parser.new({}, {}) }
+    let(:capture_stdout){ StringIO.new }
+    let(:mount_banner){ parser.mount_banner }
+    let!(:educate){ mount_banner.educate(capture_stdout) }
+    subject{ capture_stdout.string }
+    it{ is_expected.to include "Bumpversion" }
+    it{ is_expected.to include Bumpversion::VERSION }
+  end
+
   describe 'wihout file' do
     context 'with current and new version' do
       let(:arguments) { ['--new-version=1.1.0', '--current-version=1.0.0'] }
@@ -70,10 +80,12 @@ describe Bumpversion::Bumpversion do
     before do
       File.write('./spec/files/bumpversion.cfg', "[bumpversion]\ncurrent-version=2.1.1\n")
       File.write('./spec/files/VERSION', "version=2.1.1\n")
+      File.write('./spec/files/VERSION_EXTRA', "version=2.1.1\n")
     end
     after(:all) do
       File.write('./spec/files/bumpversion.cfg', '')
       File.write('./spec/files/VERSION', '')
+      File.write('./spec/files/VERSION_EXTRA', '')
     end
     context 'patch' do
       let(:arguments) { ['--config-file=./spec/files/bumpversion.cfg', '--file=./spec/files/VERSION', '--part=patch'] }
@@ -127,6 +139,25 @@ describe Bumpversion::Bumpversion do
       it "do bump file" do
         expect(File.read('./spec/files/bumpversion.cfg')).to include("current-version=3.0.0")
         expect(File.read('./spec/files/VERSION')).to include("version=3.0.0")
+      end
+    end
+    context 'major with extra file' do
+      let(:arguments) { ['--config-file=./spec/files/bumpversion.cfg', '--file=./spec/files/VERSION,./spec/files/VERSION_EXTRA', '--part=major'] }
+      let(:bump_instance) { Bumpversion::Bumpversion.new arguments }
+      let!(:bump_run) { bump_instance.run }
+      subject { bump_instance.instance_variable_get(:@options) }
+
+      it { expect(bump_instance).to be_a Bumpversion::Bumpversion }
+      it { is_expected.to be_a Hash }
+      it { is_expected.to include :help  }
+      it { is_expected.to include :part  }
+      it { is_expected.to include :file  }
+      it { is_expected.to include current_version: '2.1.1' }
+      it { is_expected.to include new_version: '3.0.0' }
+      it "do bump file" do
+        expect(File.read('./spec/files/bumpversion.cfg')).to include("current-version=3.0.0")
+        expect(File.read('./spec/files/VERSION')).to include("version=3.0.0")
+        expect(File.read('./spec/files/VERSION_EXTRA')).to include("version=3.0.0")
       end
     end
   end
