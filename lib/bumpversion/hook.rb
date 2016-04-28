@@ -1,7 +1,7 @@
 
 module Bumpversion
   class Hook
-    def self.call_system(key_hook,options)
+    def self.call_system(key_hook, options)
       return false unless options[key_hook]
       command = options[key_hook] % options
       PrettyOutput.info "Executing command: #{command}"
