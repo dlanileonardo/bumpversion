@@ -1,7 +1,15 @@
 # Change Log
 
-## [0.3.2](https://github.com/dlanileonardo/bumpversion/tree/0.3.2) (2016-04-27)
-[Full Changelog](https://github.com/dlanileonardo/bumpversion/compare/v0.3.1...0.3.2)
+## [0.4.0](https://github.com/dlanileonardo/bumpversion/tree/0.4.0) (2016-04-28)
+[Full Changelog](https://github.com/dlanileonardo/bumpversion/compare/v0.3.2...0.4.0)
+
+**Merged pull requests:**
+
+- Specs and Parser [\#23](https://github.com/dlanileonardo/bumpversion/pull/23) ([dlanileonardo](https://github.com/dlanileonardo))
+- Stable [\#22](https://github.com/dlanileonardo/bumpversion/pull/22) ([dlanileonardo](https://github.com/dlanileonardo))
+
+## [v0.3.2](https://github.com/dlanileonardo/bumpversion/tree/v0.3.2) (2016-04-28)
+[Full Changelog](https://github.com/dlanileonardo/bumpversion/compare/v0.3.1...v0.3.2)
 
 **Merged pull requests:**
 
