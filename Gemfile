@@ -9,8 +9,12 @@ gem 'colorize', '>= 0.7'
 gem 'git', '>= 1.2.9'
 
 group :test do
-  gem 'rubocop', '~>0.31'
+  gem 'rake'
+  gem 'bundler'
+  gem 'rspec', '~> 3.0.0'
+  gem 'rspec-core', '~> 3.0.0'
+  gem 'rubocop', '~>0.31', require: false
   gem 'coveralls', '~>0.8', require: false
   gem 'simplecov', '~>0.10', require: false
-  gem "codeclimate-test-reporter", "~>0.4"
+  gem "codeclimate-test-reporter", "~>0.4", require: false
 end
