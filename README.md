@@ -1,12 +1,12 @@
 # Bumpversion
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/bumpversion`. To experiment with that code, run `bin/console` for an interactive prompt.
+Simple command to Bump version your project in shell.
 
-TODO: Delete this and the text above, and describe your gem
+- Bump multiple files version in your project
+- Git operations like commit, tag and push
+- Customizables Hooks
 
 # Code Status
-
-
 
 Service | Status
 --------|----------
@@ -15,6 +15,7 @@ Gems Version|[![Gem](https://img.shields.io/gem/v/bumpversion.svg?maxAge=2592000
 Code Climate|[![Code Climate](https://img.shields.io/codeclimate/github/kabisaict/flow.svg?maxAge=2592000&style=flat-square)](https://codeclimate.com/github/dlanileonardo/bumpversion)
 Coverage|[![Code Climate](https://img.shields.io/codeclimate/coverage/github/dlanileonardo/bumpversion.svg?maxAge=2592000&style=flat-square)](https://codeclimate.com/github/dlanileonardo/bumpversion/coverage)
 Build Status|[![Travis](https://img.shields.io/travis/dlanileonardo/bumpversion.svg?maxAge=2592000&style=flat-square)](https://travis-ci.org/dlanileonardo/bumpversion)
+Dependencies|[![Gemnasium](https://img.shields.io/gemnasium/dlanileonardo/bumpversion.svg?maxAge=2592000&style=flat-square)]()
 
 ## Installation
 
