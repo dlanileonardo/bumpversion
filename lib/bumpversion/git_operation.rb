@@ -8,17 +8,12 @@ module Bumpversion
       Git.init('.')
     end
 
-    def config!
-      @git.config('user.name', @options[:git_user])
-      @git.config('user.email', @options[:git_email])
-    end
-
     def commit!
       if @options[:git_commit]
         file = @options[:file].split(',') + [@options[:config_file]]
         file += @options[:git_extra_add].split(',') if @options[:git_extra_add]
         @git.add(file)
-        @git.commit("Bump version: #{@options[:current_version]} → #{@options[:new_version]}")
+        @git.commit("Bump version: #{@options[:current_version]} → #{@options[:new_version]}", {author: "#{@options[:git_user]} <#{@options[:git_email]}>"})
       end
     end
 
@@ -32,7 +27,6 @@ module Bumpversion
     end
 
     def do!
-      config!
       commit!
       tag!
       push!
