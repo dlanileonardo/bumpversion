@@ -1,7 +1,15 @@
 # Change Log
 
-## [0.4.0](https://github.com/dlanileonardo/bumpversion/tree/0.4.0) (2016-04-28)
-[Full Changelog](https://github.com/dlanileonardo/bumpversion/compare/v0.3.2...0.4.0)
+## [0.5.0](https://github.com/dlanileonardo/bumpversion/tree/0.5.0) (2016-05-18)
+[Full Changelog](https://github.com/dlanileonardo/bumpversion/compare/v0.4.0...0.5.0)
+
+**Merged pull requests:**
+
+- Adjusts README [\#25](https://github.com/dlanileonardo/bumpversion/pull/25) ([dlanileonardo](https://github.com/dlanileonardo))
+- Stable [\#24](https://github.com/dlanileonardo/bumpversion/pull/24) ([dlanileonardo](https://github.com/dlanileonardo))
+
+## [v0.4.0](https://github.com/dlanileonardo/bumpversion/tree/v0.4.0) (2016-04-28)
+[Full Changelog](https://github.com/dlanileonardo/bumpversion/compare/v0.3.2...v0.4.0)
 
 **Merged pull requests:**
 
