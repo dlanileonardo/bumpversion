@@ -6,6 +6,10 @@ Simple command to Bump version your project in shell.
 - Git operations like commit, tag and push
 - Customizables Hooks
 
+# Screencast
+
+[![asciicast](https://asciinema.org/a/0137fm32a947bqqmg5r1eqt8p.png)](https://asciinema.org/a/0137fm32a947bqqmg5r1eqt8p)
+
 # Code Status
 
 Service | Status
