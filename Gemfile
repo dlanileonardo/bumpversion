@@ -9,7 +9,7 @@ gem 'colorize', '>= 0.7'
 gem 'git', '>= 1.2.9'
 
 group :test do
-  gem 'rake'
+  gem 'rake', '< 11.0'
   gem 'bundler'
   gem 'rspec', '~> 3.0.0'
   gem 'rspec-core', '~> 3.0.0'
