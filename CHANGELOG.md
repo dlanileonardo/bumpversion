@@ -1,7 +1,7 @@
 # Change Log
 
-## [0.5.1](https://github.com/dlanileonardo/bumpversion/tree/0.5.1) (2018-04-24)
-[Full Changelog](https://github.com/dlanileonardo/bumpversion/compare/v0.5.0...0.5.1)
+## [v0.5.1](https://github.com/dlanileonardo/bumpversion/tree/v0.5.1) (2018-04-24)
+[Full Changelog](https://github.com/dlanileonardo/bumpversion/compare/v0.5.0...v0.5.1)
 
 **Merged pull requests:**
 
