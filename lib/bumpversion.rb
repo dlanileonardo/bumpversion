@@ -12,6 +12,7 @@ module Bumpversion
   class Bumpversion
     def initialize(arguments = nil)
       PrettyOutput.start("Bump your project ... ☺ ")
+      @options = {}
 
       PrettyOutput.begin("Parsing Options Start")
       parser = Parser.new @options, arguments
