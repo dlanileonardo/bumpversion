@@ -1,7 +1,18 @@
 # Change Log
 
-## [0.5.0](https://github.com/dlanileonardo/bumpversion/tree/0.5.0) (2016-05-18)
-[Full Changelog](https://github.com/dlanileonardo/bumpversion/compare/v0.4.0...0.5.0)
+## [0.5.1](https://github.com/dlanileonardo/bumpversion/tree/0.5.1) (2018-04-24)
+[Full Changelog](https://github.com/dlanileonardo/bumpversion/compare/v0.5.0...0.5.1)
+
+**Merged pull requests:**
+
+- Update Gems [\#31](https://github.com/dlanileonardo/bumpversion/pull/31) ([dlanileonardo](https://github.com/dlanileonardo))
+- Chore/readme [\#29](https://github.com/dlanileonardo/bumpversion/pull/29) ([dlanileonardo](https://github.com/dlanileonardo))
+- Stable [\#28](https://github.com/dlanileonardo/bumpversion/pull/28) ([dlanileonardo](https://github.com/dlanileonardo))
+- Update Gemfile [\#27](https://github.com/dlanileonardo/bumpversion/pull/27) ([dlanileonardo](https://github.com/dlanileonardo))
+- IMG Screen Cast [\#26](https://github.com/dlanileonardo/bumpversion/pull/26) ([dlanileonardo](https://github.com/dlanileonardo))
+
+## [v0.5.0](https://github.com/dlanileonardo/bumpversion/tree/v0.5.0) (2016-05-18)
+[Full Changelog](https://github.com/dlanileonardo/bumpversion/compare/v0.4.0...v0.5.0)
 
 **Merged pull requests:**
 
