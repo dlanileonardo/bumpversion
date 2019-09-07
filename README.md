@@ -8,7 +8,7 @@ Simple command to Bump version your project in shell.
 
 # Screencast
 
-[![asciicast](https://asciinema.org/a/c1o6gpp63xggu3w49n3xzte65.png)](https://asciinema.org/a/c1o6gpp63xggu3w49n3xzte65)
+[![asciicast](docs/demo.svg)]()
 
 # Code Status
 
