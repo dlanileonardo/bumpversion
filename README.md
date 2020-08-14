@@ -14,12 +14,8 @@ Simple command to Bump version your project in shell.
 
 Service | Status
 --------|----------
-Issues Ready to Work|[![Waffle.io](https://img.shields.io/waffle/label/dlanileonardo/bumpversion/in%20progress.svg?maxAge=2592000&style=flat-square)](https://waffle.io/dlanileonardo/bumpversion)
 Gems Version|[![Gem](https://img.shields.io/gem/v/bumpversion.svg?maxAge=2592000&style=flat-square)](http://badge.fury.io/rb/bumpversion)
-Code Climate|[![Maintainability](https://api.codeclimate.com/v1/badges/72b943c3b8a36abfb345/maintainability)](https://codeclimate.com/github/dlanileonardo/bumpversion/maintainability)
-Coverage|[![Test Coverage](https://api.codeclimate.com/v1/badges/72b943c3b8a36abfb345/test_coverage)](https://codeclimate.com/github/dlanileonardo/bumpversion/test_coverage)
-Build Status|[![Travis](https://img.shields.io/travis/dlanileonardo/bumpversion.svg?maxAge=2592000&style=flat-square)](https://travis-ci.org/dlanileonardo/bumpversion)
-Dependencies|[![Gemnasium](https://img.shields.io/gemnasium/dlanileonardo/bumpversion.svg?maxAge=2592000&style=flat-square)]()
+Build Status|[![CI](https://github.com/dlanileonardo/bumpversion/workflows/CI/badge.svg)](https://github.com/dlanileonardo/bumpversion/actions?query=workflow%3ACI)
 
 ## Installation
 
