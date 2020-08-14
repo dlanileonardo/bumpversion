@@ -8,7 +8,7 @@ Simple command to Bump version your project in shell.
 
 # Screencast
 
-[![asciicast](https://asciinema.org/a/c1o6gpp63xggu3w49n3xzte65.png)](https://asciinema.org/a/c1o6gpp63xggu3w49n3xzte65)
+[![asciicast](docs/demo.svg)]()
 
 # Code Status
 
@@ -16,7 +16,6 @@ Service | Status
 --------|----------
 Gems Version|[![Gem](https://img.shields.io/gem/v/bumpversion.svg?maxAge=2592000&style=flat-square)](http://badge.fury.io/rb/bumpversion)
 Build Status|[![CI](https://github.com/dlanileonardo/bumpversion/workflows/CI/badge.svg)](https://github.com/dlanileonardo/bumpversion/actions?query=workflow%3ACI)
-
 
 ## Installation
 
