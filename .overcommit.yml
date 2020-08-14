@@ -15,10 +15,11 @@
 #
 # Uncomment the following lines to make the configuration take effect.
 PreCommit:
-  RuboCop:
+  Rspec:
     enabled: true
     command: ['bundle', 'exec', 'rake']
     on_warn: fail # Treat all warnings as failures
+    description: "Running rspec"
 #
 #  TrailingWhitespace:
 #    exclude:
