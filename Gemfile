@@ -10,9 +10,9 @@ gem 'git', '>= 1.2.9'
 
 group :test do
   gem 'rake', '< 14.0'
-  gem 'rspec', '~> 3.0.0'
-  gem 'rspec-core', '~> 3.0.0'
-  gem 'rspec-expectations', '~> 3.0.0'
+  gem "rspec", "< 4"
+  gem 'rspec-core', '< 4'
+  gem 'rspec-expectations', '< 4'
   gem 'rubocop', '~>0.89.1', require: false
   gem 'coveralls', '~>0.8', require: false
   gem 'simplecov', '~>0.10', require: false

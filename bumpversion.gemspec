@@ -6,7 +6,7 @@ require 'bumpversion/version'
 Gem::Specification.new do |spec|
   spec.name          = 'bumpversion'
   spec.version       = Bumpversion::VERSION
-  spec.default_executable = "bumpversion"
+  # spec.default_executable = "bumpversion"
   spec.authors       = ['Dlani Mendes']
   spec.email         = ['dlanileonardo@gmail.com']
   spec.date = `date +"%Y-%m-%d"`.strip!
