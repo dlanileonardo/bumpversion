@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in bumpversion.gemspec
 gemspec
 
-gem 'trollop', '>= 2.1'
+gem 'optimist', '>= 3.0'
 gem 'parseconfig', '>= 1.0'
 gem 'colorize', '>= 0.7'
 gem 'git', '>= 1.2.9'

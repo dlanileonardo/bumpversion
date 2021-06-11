@@ -1,4 +1,4 @@
-require 'trollop'
+require 'optimist'
 require 'bumpversion/version'
 
 module Bumpversion
@@ -10,7 +10,7 @@ module Bumpversion
 
     def mount_banner
       version_number = VERSION
-      Trollop::Parser.new do
+      Optimist::Parser.new do
         version "Bumpversion #{version_number} ☺"
         usage "bumpversion [options] --part [major|minor|patch]
         where [options] are:"
@@ -48,12 +48,12 @@ Usage:
 
     def parse
       banner = mount_banner
-      @options = Trollop.with_standard_exception_handling banner do
-        fail Trollop::HelpNeeded if @args.empty?
+      @options = Optimist.with_standard_exception_handling banner do
+        fail Optimist::HelpNeeded if @args.empty?
         banner.parse @args
       end
 
-      Trollop.die if @options[:help]
+      Optimist.die if @options[:help]
 
       @options
     end

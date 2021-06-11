@@ -74,6 +74,19 @@ describe Bumpversion::Bumpversion do
       it { is_expected.to include current_version: '1.1.1' }
       it { is_expected.to include new_version: '1.1.2' }
     end
+    context 'major with build' do
+      let(:arguments) { ['--current-version=1.0.1+10', '--part=major'] }
+      let(:bump_instance) { Bumpversion::Bumpversion.new arguments }
+      subject { bump_instance.instance_variable_get(:@options) }
+
+      it { expect(bump_instance).to be_a Bumpversion::Bumpversion }
+      it { is_expected.to be_a Hash }
+      it { is_expected.to include :help  }
+      it { is_expected.to include :part  }
+      it { is_expected.to include :file  }
+      it { is_expected.to include current_version: '1.0.1+10' }
+      it { is_expected.to include new_version: '2.0.0+11' }
+    end
   end
 
   describe 'with file' do
