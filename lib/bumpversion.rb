@@ -28,6 +28,7 @@ module Bumpversion
       bump_string = BumpString.new @options
       @options = bump_string.bump
       PrettyOutput.sucess("Done!")
+
       @git = GitOperation.new @options
     end
 
@@ -46,7 +47,7 @@ module Bumpversion
       PrettyOutput.sucess("Done!")
 
       PrettyOutput.begin("Git Operations")
-      @git.do!
+      # @git.do!
       PrettyOutput.sucess("Done!")
 
       PrettyOutput.begin("Pos Commit Hooks")

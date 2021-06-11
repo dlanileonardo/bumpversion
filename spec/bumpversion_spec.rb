@@ -91,7 +91,7 @@ describe Bumpversion::Bumpversion do
 
   describe 'with file' do
     before do
-      File.write('./spec/files/bumpversion.cfg', "[bumpversion]\ncurrent-version=2.1.1\n")
+      File.write('./spec/files/bumpversion.cfg', "[bumpversion]\ncurrent-version=2.1.1\ngit-commit=no\n")
       File.write('./spec/files/VERSION', "version=2.1.1\n")
       File.write('./spec/files/VERSION_EXTRA', "version=2.1.1\n")
     end
