@@ -46,9 +46,11 @@ module Bumpversion
       Hook.pre_commit_hook @options
       PrettyOutput.sucess("Done!")
 
-      PrettyOutput.begin("Git Operations")
-      # @git.do!
-      PrettyOutput.sucess("Done!")
+      if @options[:git_commit] || @options[:git_tag] || @options[:git_push]
+        PrettyOutput.begin("Git Operations")
+        @git.do!
+        PrettyOutput.sucess("Done!")
+      end
 
       PrettyOutput.begin("Pos Commit Hooks")
       Hook.pos_commit_hook @options

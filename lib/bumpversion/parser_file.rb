@@ -19,12 +19,10 @@ module Bumpversion
         key_given_file = "#{key_given}_file"
 
         unless options[key_given.to_sym]
-          options[key.to_sym] = %w[yes no true false].include?(value) ?
-                                { "yes": true, "true": true, "no": false, "false": false, }[value] : value
+          options[key.to_sym] = %w[yes no].include?(value) ? { "yes" => true, "no" => false }[value] : value
           options[key_given_file.to_sym] = value
         end
       end
-
       options
     end
   end
