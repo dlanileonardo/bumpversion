@@ -18,7 +18,7 @@ module Bumpversion
       puts "    → #{msg}".blue
     end
 
-    def self.sucess(msg)
+    def self.success(msg)
       puts "      → #{msg} √".green
     end
 
