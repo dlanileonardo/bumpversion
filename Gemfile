@@ -13,7 +13,7 @@ group :test do
   gem "rspec", "< 4"
   gem 'rspec-core', '< 4'
   gem 'rspec-expectations', '< 4'
-  gem 'rubocop', '~>1.69.0', require: false
+  gem 'rubocop', '~>1.70.0', require: false
   gem 'coveralls', '~>0.8', require: false
   gem 'simplecov', '~>0.10', require: false
   gem "codeclimate-test-reporter", "~>1.0", require: false
