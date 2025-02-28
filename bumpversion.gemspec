@@ -25,5 +25,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency("optimist", ["~> 3.0"])
   spec.add_runtime_dependency("parseconfig", ["~> 1.0"])
   spec.add_runtime_dependency("colorize", ">= 0.7", "< 2.0")
-  spec.add_runtime_dependency("git", '>= 1.2.9', '< 3.0')
+  spec.add_runtime_dependency("git", '>= 1.2.9', '< 4.0')
 end
